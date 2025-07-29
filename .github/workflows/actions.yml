@@ -1,0 +1,9 @@
+name: main-workflow
+on: push
+jobs:
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - run: make setup
+      - run: make test
+      - run: make lint
